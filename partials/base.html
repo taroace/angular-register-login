@@ -1,0 +1,84 @@
+<header>
+  <div class="container-fluid alert-custom alert" tabindex="-1">
+    <div class="row header-offer text-center text-white">
+      <div class="col-md-6">
+        <ul class="list-inline no-margin">
+          <li><a href="#" class="btn btn-default offer-btn">Use Boucher:CB60</a></li>
+          <li><strong>Get an extra 10% cashback on todays top bargains.</strong></li>
+        </ul>
+      </div>
+      <div class="col-md-5 text-right button-padding">
+        <ul class="list-inline services no-margin">
+          <li class="border-right-1"><i class="fa fa-shopping-bag"></i> Sell</li>
+          <li class="border-right-1"><i class="fa fa-mobile"></i> Download App</li>
+          <li><i class="fa fa-phone"></i> 24*7 Customer Care</li>
+        </ul>
+      </div>
+      <div class="col-md-1 button-padding">
+      <button type="button" class="close text-white" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-default navbar-reset bg-grey">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+       Logo</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <form class="navbar-form navbar-menu navbar-menu-xs">
+            <div class="row">
+              <div class="col-lg-8 col-lg-offset-1 col-sm-8 col-sm-offset-1">
+                <div class="input-group">
+                  <input type="text" class="form-control input-lg border-radius-0" placeholder="I'm looking for">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default btn-lg  border-radius-0 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All <span class="caret"></span></button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </div><!-- /btn-group -->
+                </div><!-- /input-group -->
+              </div>
+              <div class="pull-right hidden-xs visible-lg-block">
+                <a href="#/login" ng-hide="currentUserLoggedIn" ng-click="logout()" class="btn btn-primary btn-lg border-radius-0 text-white">Log Out</a>
+                <a ui-sref=".registration" ng-hide="currentUserSignedIn" class="btn btn-primary btn-lg border-radius-0 margin-left-5 text-muted">Sign Up</a>
+                <a ui-sref=".login" ng-hide="currentUserSignedIn" class="btn bg-grey btn-lg margin-left-5 border-radius-0">Sign In</a>
+              </div>
+            </div>
+            <div class="text-center">
+              <ul class="list-inline menu-bottom">
+                <li><i class="fa fa-binoculars"></i> Discover</li>
+                <li><i class="fa fa-binoculars"></i> Top Bargains</li>
+                <li><i class="fa fa-binoculars"></i> Electronics</li>
+                <li><i class="fa fa-binoculars"></i> Fashion</li>
+                <li><i class="fa fa-binoculars"></i> Health & Beauty</li>
+                <li><i class="fa fa-binoculars"></i> Home & Kitchen</li>
+              </ul>
+              <div class="hidden-lg">
+                <a href="#/login" ng-hide="currentUserLoggedIn" ng-click="logout()" class="btn btn-primary btn-lg border-radius-0 text-white">Log Out</a>
+                <a ui-sref=".registration" ng-hide="currentUserSignedIn" class="btn btn-primary btn-lg border-radius-0 margin-left-5 text-muted">Sign Up</a>
+                <a ui-sref=".login" ng-hide="currentUserSignedIn" class="btn bg-grey btn-lg margin-left-5 border-radius-0">Sign In</a>
+              </div>
+            </div>
+          </form>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+	<div ui-view="main-view"></div>

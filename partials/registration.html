@@ -1,0 +1,66 @@
+<section class="section-spaces">
+  <div class="container">
+    <div class="col-md-6 col-md-offset-3 text-center">
+     <div class="col-md-10 col-md-offset-1">
+      <p class="text-center">Step 1 of 2</p>
+      <h4>Create your account to explore BuyMeStuff</h4>
+      <div class="strike">
+        <h4>Connect With</h4>
+      </div>
+      <div class="row social-login">
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <button type="button" class="btn btn-default btn-primary btn-block" aria-label="Left Align">
+          <span class="fa fa-facebook" aria-hidden="true"></span> &nbsp;Facebook
+          </button>
+        </div>
+          <div class="col-md-5">
+            <button type="button" class="btn btn-danger btn-block"><span class="fa fa-google-plus" aria-hidden="true"></span> &nbsp;Google</button>
+          </div>
+        </div>
+        <div class="strike">
+          <h4>Or SignUp with your email address</h4>
+          <br>
+          <br>
+        </div>
+        </div>
+        <form name="form" ng-submit="register()" class="registration-form">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required || form.email.$error.email }">
+                <input type="email" name="email" id="email" class="form-control" validate-email placeholder="Email" ng-model="user.email" required />
+                <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">Email is required</span>
+                <span ng-show="form.email.$error.email" class="help-block">Enter a valid email</span>
+              </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required || (form.password.$error.minlength || form.password.$error.maxlength)}">
+                  <input type="password" name="password" ng-minlength="6" ng-maxlength="16" id="password" class="form-control" placeholder="Password" ng-model="user.password" password-strength="user.password" required />
+                  <span class="strength-message" ng-class="strength"> {{strength}} </span>
+                  <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+                  <span ng-show="form.password.$error.minlength || form.password.$error.maxlength" class="help-block">Password must be 6-16 character long</span>
+              </div>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+              <div class="form-group" ng-class="{ 'has-error': (form.confirm_password.$dirty && form.confirm_password.$error.required) || form.confirm_password.$error.passwordVerify }">
+                  <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Confirm Password" ng-model="user.confirm_password" required password-verify="user.password" />
+                  <span ng-show="form.confirm_password.$dirty && form.confirm_password.$error.required" class="help-block">Confirm Password is required</span>
+                  <span ng-show="form.confirm_password.$error.passwordVerify" class="help-block">Please make sure passwords match & must be 6-16 character long</span>
+              </div>
+            </div>
+            </div>
+            <div class="form-actions">
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                  <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-block text-white button-theme"><span ng-if="!dataLoading">Sign Up</span> <img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" /></button>
+                </div>
+              </div>
+            </div>
+        </form>
+      </div>
+    </div>
+
+</section>

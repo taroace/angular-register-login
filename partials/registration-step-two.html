@@ -1,0 +1,66 @@
+<section class="section-spaces">
+  <div class="container">
+    <div class="col-md-6 col-md-offset-3 text-center">
+      <p class="text-center">Step 2</p>
+      <form name="form" ng-submit="registerDetail()" class="registration-form">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firsrName.$error.required }">
+            <input type="text" name="firstName" id="firstName" class="form-control" ng-model="user.firstName" required placeholder="First Name"/>
+            <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First Name is required</span>
+          </div>
+        </div>
+        <div class="col-md-10 col-md-offset-1">
+        <input type="hidden" class="form-control" ng-model="user.token" ng-init="user.token=token"/>
+          <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+            <input type="text" name="lastName" id="lastName" class="form-control" ng-model="user.lastName" placeholder="Last Name" required />
+            <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last Name is required</span>
+          </div>
+        </div>
+        <div class="col-md-10 col-md-offset-1">
+          <div class="form-group" ng-class="{ 'has-error': form.zip.$dirty && form.zip.$error.required }">
+            <input type="number" name="zip" id="zip" class="form-control" placeholder="Zip Code" ng-model="user.zip" required />
+            <span ng-show="form.zip.$dirty && form.zip.$error.required" class="help-block">zip code is required</span>
+          </div>
+        </div>
+        <div class="col-md-10 col-md-offset-1">
+          <div class="form-group" ng-class="{ 'has-error': form.phoneNumber.$dirty && form.phoneNumber.$error.required }">
+            <input type="text" name="phoneNumber" id="phoneNumber" class="form-control" placeholder="Phone Number" ng-model="user.phoneNumber" required />
+            <span ng-show="form.phoneNumber.$dirty && form.phoneNumber.$error.required" class="help-block">Phone Number is required</span>
+          </div>
+        </div>
+        <div class="col-md-10 col-md-offset-1">
+          <div class="form-group" ng-class="{ 'has-error': form.gender.$dirty && form.gender.$error.required }">
+            <select class="form-control" name="gender" id="gender" ng-model="user.gender" required>
+              <option value="" disabled selected>Select your option</option>
+              <option>M</option>
+              <option>F</option>
+            </select>
+            <span ng-show="form.gender.$dirty && form.gender.$error.required" class="help-block">Gender is required</span>
+          </div>
+        </div>
+        <div class="col-md-10 col-md-offset-1">
+          <div class="form-group" ng-class="{ 'has-error': form.birthDate.$dirty && form.birthDate.$error.required }">
+            <input type="text" id="datepicker" name="birthDate" id="birthDate" class="form-control" ng-model="user.birthDate" placeholder="Date of Birth" required />
+            <span ng-show="form.birthDate.$dirty && form.birthDate.$error.required" class="help-block">Date of Birth is required</span>
+          </div>
+        </div>
+        <div class="form-actions">
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                  <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-block text-white button-theme"><span ng-if="!dataLoading">Sign Up</span><img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" /></button>
+                </div>
+              </div>
+            </div>
+      </form>
+    </div>
+  </div>
+
+</section>
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker({
+       changeMonth: true,
+      changeYear: true
+    });
+  });
+</script>

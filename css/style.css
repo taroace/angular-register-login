@@ -1,0 +1,168 @@
+.navbar-nav{
+  float: none;
+}
+.navbar-form.navbar-menu{
+  margin-top: 18px; 
+}
+.navbar-form .input-group{
+  width: 100%; 
+}
+.logo{
+  height: 77px;
+}
+.navbar-default.navbar-reset{
+  background: #f5f5f5;
+  border-color: #fff;
+  min-height: 70px;
+  margin-bottom: 0;
+}
+.navbar-brand{
+  height: 70px;
+  padding: 18px 0;
+}
+.bg-grey{
+  background-color: #e4e4e4;
+}
+.border-radius-0{
+  border-radius:0; 
+}
+.margin-left-5{
+  margin-left: 5px;
+}
+.body-bg{
+  background-color: #f4f5f7
+}
+.registration-form .form-control, .login-form .form-control{
+  border-radius: 0;
+}
+.no-pad{
+  padding: 0;
+}
+.no-margin{
+  margin: 0;
+}
+.verticle-center{
+  display: table-cell;
+  vertical-align: middle;
+}
+.display-table{
+  display: table;
+}
+.header-offer{
+  padding: 5px 0;
+}
+.button-padding{
+  padding: 6px 12px;
+}
+.regis-heading{
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.text-white{
+  color: #fff;
+}
+.button-theme{
+  background-color: #ffd119; 
+}
+.alert-custom{
+  margin-bottom: 0;
+  padding: 0 15px;
+  border-radius: 0;
+  border:0;
+  background-color: #305194;
+}
+.offer-btn{
+  background: transparent;
+  color: #fff;
+  border: 1px dotted #fff;
+}
+.services > li{
+  padding-right: 10px;
+  padding-left: 5px;
+}
+.border-right-1{
+  border-right: 1px solid #fff;
+}
+.menu-bottom{
+  padding-top: 15px;
+}
+.menu-bottom > li{
+  font-size: 17px;
+  padding: 0 18px;
+}
+.section-spaces{
+  padding: 60px 0;
+}
+.strike {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap; 
+}
+
+.strike > h4 {
+  position: relative;
+  display: inline-block;
+}
+
+.strike > h4:before,
+.strike > h4:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 9999px;
+  height: 1px;
+  background: #ebebeb;
+}
+
+.strike > h4:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.strike > h4:after {
+  left: 100%;
+  margin-left: 15px;
+}
+.social-login{
+  padding: 20px 0;
+}
+.strength-message{
+  position: absolute;
+  right: 5%;
+  top: 11%;
+}
+.strong   { color: #060; border-color: #0F0;}
+.medium   { color: #C60; border-color: #FC0;}
+.weak     { color: #900; border-color: #F00;}
+@media only screen and (max-width: 768px) {
+  .navbar-brand{
+    padding: 2px 0;
+  }
+  .logo {
+    height: 62px;
+  }
+  .button-responsive{
+    float: none !important;
+    text-align: center;
+    margin: 5px 0;
+  }
+  .menu-bottom > li{
+    display: block;
+    text-align: left;
+    padding: 10px 5px;
+  }
+  .menu-bottom{
+    margin-left: 5px;
+  }
+  .navbar-menu-xs{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .navbar-form.navbar-menu{
+    margin-top: 0;
+  }
+  .navbar-nav{
+    margin: 0;
+  }
+}
